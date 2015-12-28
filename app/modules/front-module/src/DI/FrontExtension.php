@@ -9,7 +9,6 @@
 
 namespace FrontModule\DI;
 
-use Flame\Modules\Configurators\IPresenterMappingConfig;
 use Flame\Modules\Providers\IPresenterMappingProvider;
 use Flame\Modules\Providers\IRouterProvider;
 use Kdyby\Doctrine\DI\IEntityProvider;
@@ -122,16 +121,16 @@ class FrontExtension extends CompilerExtension implements
 
 
     /**
-     * Setup presenter mapping : ClassNameMask => PresenterNameMask
+     * Returns array of ClassNameMask => PresenterNameMask
      *
-     * @example https://gist.github.com/jsifalda/50bedd439ab23df57058
-     *
-     * @param IPresenterMappingConfig &$presenterMappingConfig
-     *
-     * @return void
+     * @example return array('*' => 'Booking\*Module\Presenters\*Presenter');
+     * @return array
      */
-    public function setupPresenterMapping(IPresenterMappingConfig &$presenterMappingConfig)
+    public function getPresenterMapping()
     {
-        $presenterMappingConfig->setMapping('Front', 'FrontModule\*Module\Presenters\*Presenter');
+        return [
+            'Front' => 'FrontModule\*Module\Presenters\*Presenter',
+        ];
     }
+
 }

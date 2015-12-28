@@ -20,5 +20,7 @@ The best way to install DevRun:CMS is create new project using
 	
 	bower update
 	npm install
+	run Gruntfile.js task copy
+	run Gruntfile.coffee task default
 	
 ### Commands

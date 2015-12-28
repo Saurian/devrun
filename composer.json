@@ -1,7 +1,7 @@
 {
     "name": "devrun/sandbox",
     "description": "devrun basic skeleton",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "type": "application",
     "keywords": ["devrun", "nette"],
     "license": "proprietary",

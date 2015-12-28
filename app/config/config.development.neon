@@ -1,0 +1,15 @@
+parameters:
+	website:
+		production: false # resource compress [css, javascripts ...]
+
+
+doctrine:
+	user: user
+	password: psw
+	dbname: database
+	autoGenerateProxyClasses: %debugMode%
+	proxyDir: "%tempDir%/proxies"
+	proxyNamespace: "proxy"
+	metadata:
+		TravelPort: annotations("%appDir%/modules/travelport-module/src/Entities")
+	cacheClass: DoctrineModule\Cache
