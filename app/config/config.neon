@@ -1,0 +1,40 @@
+#
+# WARNING: it is CRITICAL that this file & directory are NOT accessible directly via a web browser!
+# https://nette.org/security-warning
+#
+parameters:
+	website:
+		version: 20151221
+		production: false # resource compress [css, javascripts ...]
+
+
+php:
+	date.timezone: Europe/Prague
+
+
+application:
+	errorPresenter: Error
+
+
+session:
+	expiration: 14 days
+
+
+services:
+
+
+doctrine:
+	charset: UTF8
+	driver: pdo_mysql
+
+
+extensions:
+	events: Kdyby\Events\DI\EventsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+	console: Kdyby\Console\DI\ConsoleExtension
+	annotations: Kdyby\Annotations\DI\AnnotationsExtension
+	replicator: Kdyby\Replicator\DI\ReplicatorExtension
+	translation: Kdyby\Translation\DI\TranslationExtension
+	debugger.session: Kdyby\SessionPanel\DI\SessionPanelExtension
+	modules: Flame\Modules\DI\ModulesExtension
+	front: FrontModule\DI\FrontExtension

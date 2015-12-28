@@ -1,0 +1,4 @@
+flash:
+	danger: Chyba
+	warning: Chyba
+	info: Informace
