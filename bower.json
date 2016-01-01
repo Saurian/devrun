@@ -11,6 +11,9 @@
     "jquery-ui": "1.11.4",
     "jquery-smooth-scroll": "~1.6.1",
     "qtip2": "~2.2.1",
-    "bs-slider": "~2.0.0"
+    "bs-slider": "~2.0.0",
+    "adminlte": "~2.3.0",
+    "Ionicons": "ionicons#~2.0.1",
+    "raphael": "~2.1.4"
   }
 }

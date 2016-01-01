@@ -37,4 +37,6 @@ extensions:
 	translation: Kdyby\Translation\DI\TranslationExtension
 	debugger.session: Kdyby\SessionPanel\DI\SessionPanelExtension
 	modules: Flame\Modules\DI\ModulesExtension
+	doctrineForms: CmsModule\Doctrine\DI\FormsExtension
+	cms: CmsModule\DI\CmsExtension
 	front: FrontModule\DI\FrontExtension

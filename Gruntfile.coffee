@@ -1,9 +1,10 @@
 module.exports = (grunt) ->
   grunt.initConfig
-    useminPrepare:
-      html: ['app/modules/front-module/src/Presenters/templates/@layout.latte']
+    useminPrepare: {
+      html: ['app/modules/front-module/src/Presenters/templates/@layout.latte', 'app/modules/cms-module/src/Presenters/templates/@layout.latte', 'app/modules/cms-module/src/Presenters/templates/@login-layout.latte']
       options:
         dest: '.'
+    }
 
     uglify:
       options: {
@@ -18,7 +19,7 @@ module.exports = (grunt) ->
     netteBasePath:
       basePath: 'www'
       options:
-        removeFromPath: ['app\\modules\\front-module\\src\\Presenters\\templates\\']
+        removeFromPath: ['app\\modules\\front-module\\src\\Presenters\\templates\\', 'app\\modules\\cms-module\\src\\Presenters\\templates\\']
 
   # These plugins provide necessary tasks.
   grunt.loadNpmTasks 'grunt-contrib-concat'

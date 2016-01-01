@@ -1,0 +1,80 @@
+{layout '../@layout.latte'}
+{block headerTitle}Profil{/block}
+{block headerSmallTitle}karta{/block}
+
+{block content}
+<div class="profile-container">
+	<div class="profile-section" n:snippet="profile">
+		<div class="profile-left">
+
+			<div class="profile-image">
+				<img class="img-responsive" src="{$basePath}/assets/img/admin-ico.png"/>
+				<i class="fa fa-user hide"></i>
+			</div>
+
+			<div class="m-b-10">
+				{*<a href="#" class="btn btn-warning btn-block btn-sm">Změnit obrázek</a>*}
+			</div>
+
+			<div class="profile-highlight">
+				{*
+				<h4><i class="fa fa-cog"></i> Jenom kontakt</h4>
+				<div class="checkbox m-b-5 m-t-0">
+					<label><input type="checkbox"/> test 1</label>
+				</div>
+				<div class="checkbox m-b-0">
+					<label><input type="checkbox"/> test 2</label>
+				</div>
+				*}
+			</div>
+
+		</div>
+
+		<div class="profile-right">
+			<div class="profile-info">
+				<div class="table-responsive">
+					<table class="table table-profile">
+						<thead>
+						<tr>
+							<th></th>
+							<th>
+								<h4>{$userEntity->firstName} {$userEntity->lastName} <small>{$userEntity->nickname}</small></h4>
+							</th>
+						</tr>
+						<tr>
+							<th></th>
+							<th>
+							{control profileForm}
+							</th>
+						</tr>
+						</thead>
+						{*
+						<tbody>
+						<tr class="highlight">
+							<td class="field">Mood</td>
+							<td><a href="#">Add Mood Message</a></td>
+						</tr>
+						<tr class="divider">
+							<td colspan="2">
+							</td>
+						</tr>
+						</tbody>
+						*}
+					</table>
+				</div>
+			</div>
+		</div>
+		{ifset $emailSend}
+			<script>
+				$.gritter.add({
+					title: "Zpráva odeslána",
+					text: {$emailSend},
+					// image: "/assets/img/admin-ico.png",
+					sticky: false,
+					time: 8000
+				});
+			</script>
+		{/ifset}
+	</div>
+</div>
+{/block}

@@ -1,10 +1,11 @@
 {
-    "name": "devrun/sandbox",
-    "description": "devrun basic skeleton",
+    "name": "devrun/cms",
+    "description": "devrun cms",
     "minimum-stability": "stable",
     "type": "application",
     "keywords": ["devrun", "nette"],
     "license": "proprietary",
+    "version": "0.1.0",
     "authors": [
         {
             "name": "Pavel Paulik",
@@ -19,7 +20,8 @@
         "kdyby/translation": "v2.2.0",
         "kdyby/nette-session-panel": "v3.2.0",
         "kdyby/fake-session": "v2.0.0",
-        "kdyby/forms-replicator": "dev-master"
+        "kdyby/forms-replicator": "dev-master",
+        "o5/grido": "^2.1"
     },
     "require-dev": {
         "nette/tester": "v1.6.1"

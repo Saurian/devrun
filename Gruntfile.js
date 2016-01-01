@@ -16,6 +16,8 @@ module.exports = function(grunt) {
 					{expand: true, cwd: 'bower_components/nette.ajax.js/', src: ['nette.ajax.js', 'extensions/*.js'], dest: 'www/assets/nette.ajax.js/'},
 					{expand: true, cwd: 'bower_components/history.nette.ajax.js/client-side', src: 'history.ajax.js', dest: 'www/assets/history.ajax.js/'},
 					{expand: true, cwd: 'bower_components/qtip2/basic/', src: '*', dest: 'www/assets/jquery.qtip/'},
+					{expand: true, cwd: 'bower_components/Ionicons/', src: ['css/*', 'fonts/*', 'png/**'], dest: 'www/assets/Ionicons/'},
+					{expand: true, cwd: 'bower_components/adminlte/', src: ['dist/css/**', 'dist/img/**', 'dist/js/app.js', 'bootstrap/**', 'plugins/**'], dest: 'www/assets/adminlte/'},
 
 				]
 			}
@@ -77,10 +79,10 @@ module.exports = function(grunt) {
             options: {
                 stderr: false
             },
-            projectCommands: {
+            commandsList: {
                 command: 'php www/index.php',
                 options: {
-                    stdout: false,
+                    stdout: true,
                     stderr: false,
                     execOptions: {
                         encoding : 'utf8'
